@@ -5,8 +5,6 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>The High Performers Reading System | HPRS</title>
 <meta name="description" content="Join Waribugo Godspower's founding cohort of HPRS — a 2-year intellectual growth system. 500+ ebooks, private business sessions, live accountability. 9 spots. April 2026. ₦10,000 lifetime access."/>
-<link rel="https://selar.com/h0qwgq8308" href="https://fonts.googleapis.com"/>
-<link rel="https://selar.com/h0qwgq8308" href="https://fonts.gstatic.com" crossorigin/>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,600;0,700;0,900;1,400;1,700&family=DM+Sans:opsz,wght@9..40,300;9..40,400;9..40,500;9..40,600;9..40,700&display=swap" rel="stylesheet"/>
 <style>
 /* Palette 1: Midnight & Gold */
@@ -49,8 +47,7 @@
   --shadow-blue:0 8px 32px rgba(212,175,55,0.2);
 }
 
-/* ── RESET ──────────────────────────────────────────────────── */
-*, *::before, *::after { margin:0; padding:0; box-sizing:border-box; }
+* { margin:0; padding:0; box-sizing:border-box; }
 html { scroll-behavior:smooth; }
 body {
   background: var(--bg);
@@ -61,12 +58,10 @@ body {
   overflow-x: hidden;
 }
 
-/* ── SCROLLBAR ───────────────────────────────────────────────── */
 ::-webkit-scrollbar { width: 4px; }
 ::-webkit-scrollbar-track { background: var(--bg); }
 ::-webkit-scrollbar-thumb { background: var(--accent); border-radius: var(--r-full); }
 
-/* ── NAVIGATION ──────────────────────────────────────────────── */
 nav {
   position: fixed; top: 0; left: 0; right: 0; z-index: 1000;
   padding: 22px 48px;
@@ -97,10 +92,9 @@ nav.scrolled {
   transition: background 0.25s, box-shadow 0.25s, transform 0.15s;
   box-shadow: var(--shadow-blue);
 }
-.nav-cta:hover  { background: var(--accent-hover); box-shadow: 0 8px 24px rgba(212,175,55,0.35); transform: translateY(-1px); }
+.nav-cta:hover { background: var(--accent-hover); transform: translateY(-1px); }
 .nav-cta:active { background: var(--accent-active); transform: translateY(0); }
 
-/* ── BUTTONS ─────────────────────────────────────────────────── */
 .btn-primary {
   display: inline-block;
   background: var(--accent);
@@ -112,19 +106,9 @@ nav.scrolled {
   letter-spacing: 0.04em;
   transition: background 0.25s, box-shadow 0.25s, transform 0.15s;
   box-shadow: var(--shadow-blue);
-  position: relative; overflow: hidden;
 }
-.btn-primary::after {
-  content: '';
-  position: absolute; inset: 0;
-  background: rgba(255,255,255,0.08);
-  opacity: 0; transition: opacity 0.2s;
-  border-radius: var(--r-md);
-}
-.btn-primary:hover  { background: var(--accent-hover); box-shadow: 0 12px 36px rgba(212,175,55,0.35); transform: translateY(-2px); }
-.btn-primary:hover::after { opacity: 1; }
-.btn-primary:active { background: var(--accent-active); transform: translateY(0); box-shadow: var(--shadow-blue); }
-.btn-primary span { position: relative; z-index: 1; }
+.btn-primary:hover { background: var(--accent-hover); transform: translateY(-2px); }
+.btn-primary:active { background: var(--accent-active); transform: translateY(0); }
 
 .btn-secondary {
   display: inline-block;
@@ -135,13 +119,10 @@ nav.scrolled {
   border-radius: var(--r-md);
   border: 1.5px solid var(--accent-border);
   cursor: pointer; text-decoration: none;
-  letter-spacing: 0.04em;
   transition: background 0.25s, border-color 0.25s, transform 0.15s;
 }
-.btn-secondary:hover  { background: var(--accent-dim); border-color: var(--accent-light); transform: translateY(-1px); }
-.btn-secondary:active { transform: translateY(0); }
+.btn-secondary:hover { background: var(--accent-dim); border-color: var(--accent-light); transform: translateY(-1px); }
 
-/* ── HERO ────────────────────────────────────────────────────── */
 #hero {
   min-height: 100vh;
   display: flex; flex-direction: column; align-items: center; justify-content: center;
@@ -175,7 +156,6 @@ canvas#heroCanvas { position: absolute; inset: 0; width: 100%; height: 100%; opa
   text-align: center;
 }
 
-/* Timer */
 .hero-timer {
   display: flex; gap: 12px; justify-content: center;
   margin-bottom: 32px; flex-wrap: wrap; align-items: center;
@@ -193,7 +173,6 @@ canvas#heroCanvas { position: absolute; inset: 0; width: 100%; height: 100%; opa
 .timer-label { font-size: 0.6rem; letter-spacing: 0.14em; text-transform: uppercase; color: var(--text-dim); }
 .timer-sep { font-family: var(--font-head); font-size: 1.8rem; color: var(--accent-border); align-self: center; }
 
-/* Spots badge */
 .spots-badge {
   display: inline-flex; align-items: center; gap: 10px;
   background: var(--red-dim);
@@ -212,10 +191,6 @@ canvas#heroCanvas { position: absolute; inset: 0; width: 100%; height: 100%; opa
 
 .hero-price-note { margin-top: 18px; font-size: 0.78rem; color: var(--text-dim); text-align: center; }
 
-/* ── DIVIDER ──────────────────────────────────────────────────── */
-.divider { width: 48px; height: 3px; background: var(--accent); border-radius: var(--r-full); margin: 0 auto; }
-
-/* ── SECTION BASE ─────────────────────────────────────────────── */
 section { padding: 100px 20px; }
 .container { max-width: 1100px; margin: 0 auto; }
 .section-label {
@@ -235,7 +210,6 @@ section { padding: 100px 20px; }
   text-align: center;
 }
 
-/* ── PROOF BAR ────────────────────────────────────────────────── */
 .proof-bar {
   background: var(--card);
   border-top: 1px solid var(--accent-border);
@@ -251,19 +225,12 @@ section { padding: 100px 20px; }
 .proof-dot { width: 4px; height: 4px; background: var(--accent-border); border-radius: 50%; }
 @keyframes marquee { from{transform:translateX(0);}to{transform:translateX(-50%);} }
 
-/* ── FOUNDER ──────────────────────────────────────────────────── */
 #founder {
   background: var(--bg2);
   border-top: 1px solid var(--accent-border);
   border-bottom: 1px solid var(--accent-border);
 }
 .founder-img-wrap { text-align: center; margin-bottom: 52px; }
-.founder-img-wrap img {
-  width: 260px; height: 320px; object-fit: cover; display: block; margin: 0 auto;
-  border-radius: var(--r-xl);
-  border: 2px solid var(--accent-border);
-  box-shadow: 0 0 40px rgba(212,175,55,0.15);
-}
 .founder-placeholder {
   width: 260px; height: 320px;
   background: var(--card2);
@@ -280,13 +247,11 @@ section { padding: 100px 20px; }
 .founder-text p { margin-bottom: 20px; font-size: 1rem; line-height: 1.95; color: var(--text); text-align: left; }
 .founder-text .highlight { color: var(--white); font-weight: 600; }
 .founder-text .gold-line { color: var(--accent); font-weight: 600; font-style: italic; }
-
 .founder-sig { margin-top: 44px; padding-top: 32px; border-top: 1px solid var(--accent-border); text-align: center; }
 .founder-sig .name { font-family: var(--font-head); font-size: 1.3rem; color: var(--white); font-style: italic; }
 .founder-sig .title { font-size: 0.78rem; color: var(--accent); letter-spacing: 0.1em; text-transform: uppercase; margin-top: 6px; }
 .founder-cta { margin-top: 40px; text-align: center; }
 
-/* ── RHETORICAL ───────────────────────────────────────────────── */
 #rhetorical { background: var(--bg); text-align: center; }
 .questions-wrap { max-width: 760px; margin: 0 auto; }
 .question-item {
@@ -294,17 +259,14 @@ section { padding: 100px 20px; }
   background: var(--card);
   border: 1px solid var(--accent-border);
   border-radius: var(--r-lg);
-  transition: border-color 0.3s, background 0.3s;
   text-align: center;
 }
-.question-item:hover { border-color: var(--accent-light); background: var(--card2); }
 .question-item p {
   font-family: var(--font-head); font-size: clamp(1.1rem, 2vw, 1.5rem);
   color: var(--white); line-height: 1.45; font-style: italic;
 }
 .rhetorical-close { margin-top: 44px; font-size: 1rem; font-style: italic; color: var(--accent); text-align: center; }
 
-/* ── PROBLEM ──────────────────────────────────────────────────── */
 #problem { background: var(--bg2); }
 .story-wrap { max-width: 780px; margin: 0 auto; }
 .story-wrap p { margin-bottom: 22px; font-size: 1.02rem; line-height: 1.95; color: var(--text); text-align: left; }
@@ -312,12 +274,10 @@ section { padding: 100px 20px; }
 .story-wrap .story-gold { color: var(--accent); font-weight: 700; font-size: 1.12rem; }
 .story-wrap .story-break { text-align: center; color: var(--accent); font-family: var(--font-head); font-size: 1.4rem; margin: 36px 0; font-style: italic; }
 
-/* ── SOLUTION ─────────────────────────────────────────────────── */
 #solution { background: var(--bg); text-align: center; }
 .solution-inner { max-width: 760px; margin: 0 auto; }
 .solution-inner p { font-size: 1rem; line-height: 1.9; margin-bottom: 20px; text-align: left; }
 
-/* ── PILLARS ──────────────────────────────────────────────────── */
 #pillars { background: var(--bg2); }
 .pillars-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -328,13 +288,10 @@ section { padding: 100px 20px; }
   border: 1px solid var(--accent-border);
   border-radius: var(--r-xl);
   padding: 36px 30px;
-  transition: border-color 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s;
   text-align: center;
+  transition: all 0.3s;
 }
-.pillar-card:hover {
-  background: var(--card2); border-color: var(--accent-light);
-  transform: translateY(-4px); box-shadow: var(--shadow-blue);
-}
+.pillar-card:hover { background: var(--card2); border-color: var(--accent-light); transform: translateY(-4px); box-shadow: var(--shadow-blue); }
 .pillar-icon { font-size: 2rem; margin-bottom: 18px; display: block; }
 .pillar-title { font-family: var(--font-head); font-size: 1.2rem; color: var(--white); margin-bottom: 12px; }
 .pillar-text { font-size: 0.92rem; line-height: 1.8; color: var(--text); }
@@ -346,7 +303,6 @@ section { padding: 100px 20px; }
   padding: 5px 14px; border-radius: var(--r-full); margin-top: 18px;
 }
 
-/* ── BUSINESS SESSIONS ────────────────────────────────────────── */
 #sessions { background: var(--bg); }
 .tracks-grid {
   display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
@@ -357,13 +313,10 @@ section { padding: 100px 20px; }
   border: 1px solid var(--accent-border);
   border-radius: var(--r-xl);
   padding: 34px 28px;
-  transition: border-color 0.3s, background 0.3s, transform 0.3s, box-shadow 0.3s;
   text-align: center;
+  transition: all 0.3s;
 }
-.track-card:hover {
-  background: var(--card2); border-color: var(--accent-light);
-  transform: translateY(-4px); box-shadow: var(--shadow-blue);
-}
+.track-card:hover { background: var(--card2); border-color: var(--accent-light); transform: translateY(-4px); box-shadow: var(--shadow-blue); }
 .track-icon { font-size: 1.8rem; margin-bottom: 16px; }
 .track-title { font-family: var(--font-head); font-size: 1.1rem; color: var(--white); margin-bottom: 6px; }
 .track-subtitle {
@@ -384,7 +337,6 @@ section { padding: 100px 20px; }
   background: var(--accent-dim); border-radius: var(--r-xl);
   text-align: center;
 }
-.sessions-note p { font-size: 0.92rem; font-style: italic; color: var(--text); }
 .sessions-badge {
   display: inline-block; font-size: 0.65rem; font-weight: 700;
   letter-spacing: 0.12em; text-transform: uppercase;
@@ -392,7 +344,6 @@ section { padding: 100px 20px; }
   padding: 5px 16px; border-radius: var(--r-full); margin-bottom: 14px;
 }
 
-/* ── AUTHORS ──────────────────────────────────────────────────── */
 #authors { background: var(--bg2); }
 .authors-grid {
   display: grid; grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
@@ -403,13 +354,10 @@ section { padding: 100px 20px; }
   border: 1px solid var(--accent-border);
   border-radius: var(--r-lg);
   padding: 20px 18px;
-  transition: border-color 0.3s, background 0.3s, transform 0.25s;
   text-align: center;
+  transition: all 0.3s;
 }
-.author-card:hover {
-  background: var(--card2); border-color: var(--accent-light);
-  transform: translateY(-3px);
-}
+.author-card:hover { background: var(--card2); border-color: var(--accent-light); transform: translateY(-3px); }
 .author-name { font-weight: 600; font-size: 0.88rem; color: var(--white); margin-bottom: 4px; }
 .author-book { font-size: 0.78rem; font-style: italic; color: var(--text); margin-bottom: 10px; }
 .author-cat {
@@ -420,7 +368,6 @@ section { padding: 100px 20px; }
 }
 .authors-close { text-align: center; margin-top: 40px; font-style: italic; color: var(--accent); font-size: 0.97rem; }
 
-/* Marquee */
 .marquee-wrap {
   overflow: hidden; margin-top: 44px;
   border-top: 1px solid var(--accent-border);
@@ -433,7 +380,6 @@ section { padding: 100px 20px; }
 }
 .marquee-track span { font-size: 0.76rem; font-weight: 600; letter-spacing: 0.08em; text-transform: uppercase; color: var(--accent); white-space: nowrap; }
 
-/* ── TIMELINE (Responsive) ────────────────────────────────────── */
 #timeline { background: var(--bg); }
 .timeline-wrap {
   position: relative;
@@ -452,14 +398,10 @@ section { padding: 100px 20px; }
   border: 1px solid var(--accent-border);
   border-radius: var(--r-xl);
   padding: 32px 28px;
-  transition: border-color 0.3s, background 0.3s, box-shadow 0.3s;
   text-align: left;
+  transition: all 0.3s;
 }
-.phase-content:hover {
-  background: var(--card2);
-  border-color: var(--accent-light);
-  box-shadow: var(--shadow-blue);
-}
+.phase-content:hover { background: var(--card2); border-color: var(--accent-light); box-shadow: var(--shadow-blue); }
 .phase-dot {
   position: absolute;
   left: 50%;
@@ -491,14 +433,9 @@ section { padding: 100px 20px; }
   line-height: 1.8;
   color: var(--text);
 }
-.phase-spacer {
-  flex: 1;
-}
-/* Mobile timeline */
+.phase-spacer { flex: 1; }
+
 @media (max-width: 768px) {
-  .timeline-wrap::before {
-    display: none;
-  }
   .phase {
     flex-direction: column;
     gap: 0;
@@ -519,16 +456,21 @@ section { padding: 100px 20px; }
     margin-left: 0;
     width: 100%;
   }
-  .phase-spacer {
-    display: none;
-  }
-  .phase:nth-child(even) .phase-content {
-    margin-left: 0;
-  }
-  .phase-title {
-    font-size: 1.2rem;
-  }
+  .phase-spacer { display: none; }
+  .phase-title { font-size: 1.2rem; }
 }
+
+.cost-q {
+  padding: 28px 32px; margin-bottom: 10px;
+  background: var(--card); border: 1px solid var(--accent-border); border-radius: var(--r-lg);
+  text-align: center;
+}
+.cost-q p { font-family: var(--font-head); font-size: clamp(1rem, 2vw, 1.3rem); font-style: italic; color: var(--white); }
+
+#urgency .urgency-inner,
+#waitlist .waitlist-inner,
+#guarantee .guarantee-inner,
+#finalcta .final-inner { text-align: center; }
 </style>
 </head>
 <body>
@@ -566,7 +508,6 @@ section { padding: 100px 20px; }
     <div class="proof-item"><span>✦ Accountability system</span><div class="proof-dot"></div></div>
     <div class="proof-item"><span>✦ 2-year growth plan</span><div class="proof-dot"></div></div>
     <div class="proof-item"><span>✦ Lifetime community</span><div class="proof-dot"></div></div>
-    <!-- duplicate for seamless loop -->
     <div class="proof-item"><span>✦ 500+ curated ebooks</span><div class="proof-dot"></div></div>
     <div class="proof-item"><span>✦ Weekly live sessions</span><div class="proof-dot"></div></div>
     <div class="proof-item"><span>✦ Business & marketing consultations</span><div class="proof-dot"></div></div>
@@ -638,349 +579,4 @@ section { padding: 100px 20px; }
       <div class="pillar-card reveal reveal-delay-1"><span class="pillar-icon">🎤</span><div class="pillar-title">Live Sessions</div><div class="pillar-text">Monday Sessions (60min): Accountability, insights, application. Mid‑week Labs: community sharing, deep‑dives, guest facilitators.</div><div class="pillar-badge">48+ sessions / year</div></div>
       <div class="pillar-card reveal reveal-delay-2"><span class="pillar-icon">📋</span><div class="pillar-title">Accountability System</div><div class="pillar-text">Weekly reports: what you read, what you learned, what you applied. Real accountability, not wishful thinking.</div><div class="pillar-badge">Weekly tracking</div></div>
       <div class="pillar-card reveal reveal-delay-3"><span class="pillar-icon">💼</span><div class="pillar-title">Business Sessions</div><div class="pillar-text">Launch strategies, offer building, marketing consultations, thought leadership. Direct access to Waribugo and specialists.</div><div class="pillar-badge">Private & live</div></div>
-      <div class="pillar-card reveal reveal-delay-4"><span class="pillar-icon">👥</span><div class="pillar-title">Community</div><div class="pillar-text">A private circle of serious thinkers. You become who you surround yourself with. This room changes your standard.</div><div class="pillar-badge">Founding cohort</div></div>
-    </div>
-  </div>
-</section>
-
-<section id="sessions">
-  <div class="container">
-    <div class="section-label">Business & Strategy</div>
-    <h2 class="section-headline reveal">Private Sessions That <em>Build Real Assets</em></h2>
-    <div class="tracks-grid">
-      <div class="track-card reveal"><div class="track-icon">🚀</div><div class="track-title">For People Starting a Business</div><div class="track-subtitle">From idea to first offer</div><ul class="track-list"><li>How to craft your first offer</li><li>Marketing fundamentals that work</li><li>Launch without overcomplicating</li><li>Positioning yourself as the go‑to</li></ul></div>
-      <div class="track-card reveal reveal-delay-1"><div class="track-icon">📈</div><div class="track-title">For Existing Business Owners</div><div class="track-subtitle">Scaling & strategy</div><ul class="track-list"><li>Growth strategy deep‑dives</li><li>Marketing audits & consultations</li><li>Operational clarity sessions</li><li>Roadmapping your next 12 months</li></ul></div>
-      <div class="track-card reveal reveal-delay-2"><div class="track-icon">🎙️</div><div class="track-title">Thought Leadership & Personal Brand</div><div class="track-subtitle">Authority that opens doors</div><ul class="track-list"><li>Developing your unique voice</li><li>Content strategy that positions you</li><li>Speaking, writing, public presence</li><li>Special guest sessions with experts</li></ul></div>
-    </div>
-    <div class="sessions-note reveal"><span class="sessions-badge">Exclusive to HPRS</span><p>These sessions are not recorded. They are live, private, and designed for your growth. You show up, you engage, you get direct feedback.</p></div>
-  </div>
-</section>
-
-<section id="authors">
-  <div class="container">
-    <div class="section-label">The Library</div>
-    <h2 class="section-headline reveal">500+ Books From <em>World‑Class Minds</em></h2>
-    <div class="authors-grid">
-      <div class="author-card reveal"><div class="author-name">Robert Greene</div><div class="author-book">The 48 Laws of Power, Mastery</div><div class="author-cat">Strategy</div></div>
-      <div class="author-card reveal"><div class="author-name">Peter Drucker</div><div class="author-book">The Effective Executive</div><div class="author-cat">Management</div></div>
-      <div class="author-card reveal"><div class="author-name">Carol Dweck</div><div class="author-book">Mindset</div><div class="author-cat">Psychology</div></div>
-      <div class="author-card reveal"><div class="author-name">James Clear</div><div class="author-book">Atomic Habits</div><div class="author-cat">Discipline</div></div>
-      <div class="author-card reveal"><div class="author-name">Napoleon Hill</div><div class="author-book">Think and Grow Rich</div><div class="author-cat">Wealth</div></div>
-      <div class="author-card reveal"><div class="author-name">Ryan Holiday</div><div class="author-book">The Obstacle Is the Way</div><div class="author-cat">Stoicism</div></div>
-      <div class="author-card reveal"><div class="author-name">Seth Godin</div><div class="author-book">This Is Marketing</div><div class="author-cat">Marketing</div></div>
-      <div class="author-card reveal"><div class="author-name">Ray Dalio</div><div class="author-book">Principles</div><div class="author-cat">Systems</div></div>
-    </div>
-    <p class="authors-close reveal">+ 500 more across business, psychology, leadership, philosophy, sales, and creativity. All curated. All in one place.</p>
-    <div class="marquee-wrap"><div class="marquee-track"><span>📘 500+ ebooks</span><span>📘 Read on any device</span><span>📘 Download & keep</span><span>📘 6 curated categories</span><span>📘 500+ ebooks</span><span>📘 Read on any device</span><span>📘 Download & keep</span><span>📘 6 curated categories</span></div></div>
-  </div>
-</section>
-
-<section id="timeline">
-  <div class="container">
-    <div class="section-label">Your Journey</div>
-    <h2 class="section-headline reveal">How the <em>Next 2 Years</em> Unfold</h2>
-    <div class="timeline-wrap">
-      <div class="phase reveal"><div class="phase-spacer"></div><div class="phase-content"><div class="phase-num">PHASE 1</div><div class="phase-title">Foundation (Months 1‑6)</div><div class="phase-text">Structured reading plan: 20 core books across business, psychology, and leadership. Weekly Monday sessions. Accountability system kicks in. You build the habit of reading, applying, and reporting.</div></div><div class="phase-dot"></div><div class="phase-spacer"></div></div>
-      <div class="phase reveal reveal-delay-1"><div class="phase-spacer"></div><div class="phase-content"><div class="phase-num">PHASE 2</div><div class="phase-title">Expansion (Months 7‑18)</div><div class="phase-text">You choose your focus: deeper dives into specific categories. Business sessions intensify: offer crafting, launch, marketing consultations. Thought leadership sessions begin. Community becomes your engine.</div></div><div class="phase-dot"></div><div class="phase-spacer"></div></div>
-      <div class="phase reveal reveal-delay-2"><div class="phase-spacer"></div><div class="phase-content"><div class="phase-num">PHASE 3</div><div class="phase-title">Mastery & Legacy (Months 19‑24)</div><div class="phase-text">You are now a different operator. You lead sessions, you mentor newer members (future cohorts), and you have built systems, businesses, and a network that carries you forward.</div></div><div class="phase-dot"></div><div class="phase-spacer"></div></div>
-    </div>
-  </div>
-</section>
-<section id="cost">
-  <div class="container">
-    <div class="section-label">The Real Question</div>
-    <h2 class="section-headline reveal">What Would <em>You Pay</em> to Change the Trajectory of Your Life?</h2>
-    <div class="cost-questions" style="max-width:740px; margin:60px auto 0;">
-      <div class="cost-q" style="padding:28px 32px; margin-bottom:10px; background:var(--card); border:1px solid var(--accent-border); border-radius:var(--r-lg); transition:border-color 0.3s, background 0.3s; text-align:center;"><p style="font-family:var(--font-head); font-size:clamp(1rem, 2vw, 1.3rem); font-style:italic; color:var(--white);">"What would it cost you — in missed clients, slow decisions, weak positioning, and stagnant thinking — to NOT invest in your growth for the next 2 years?"</p></div>
-      <div class="cost-q" style="padding:28px 32px; margin-bottom:10px; background:var(--card); border:1px solid var(--accent-border); border-radius:var(--r-lg); transition:border-color 0.3s, background 0.3s; text-align:center;"><p style="font-family:var(--font-head); font-size:clamp(1rem, 2vw, 1.3rem); font-style:italic; color:var(--white);">"If one session inside HPRS helped you build your first offer, land your first client, or finally finish the book that changed your perspective — would ₦10,000 feel expensive?"</p></div>
-    </div>
-    <div class="cost-close reveal" style="text-align:center;"><p><strong>The cost of HPRS is ₦10,000 — once.<br/>The cost of not joining is the next 2 years of your life.</strong></p></div>
-    <div style="text-align:center;margin-top:48px;" class="reveal">
-      <a href="https://selar.com/h0qwgq8308" class="btn-primary"><span>Join Now For ₦10,000</span></a>
-    </div>
-  </div>
-</section>
-
-<section id="pricing">
-  <div class="container">
-    <div class="section-label">The Offer</div>
-    <h2 class="section-headline reveal">Here Is the Real Value of What You Are Getting.<br/><em>Read Every Line.</em></h2>
-    <p class="section-sub reveal" style="font-style:italic;color:var(--accent);">And then ask yourself if ₦10,000 is really what you thought the number was going to be.</p>
-
-    <div class="value-table" style="margin-top:48px;">
-      <div style="display:flex;justify-content:space-between;border-bottom:1px solid var(--accent-border);padding:16px 0;font-weight:700;color:var(--accent);"><div style="flex:2">Item</div><div style="flex:1;text-align:right">Market Value</div></div>
-      <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:16px 0;display:flex;justify-content:space-between;"><div style="flex:2"><strong>500+ Curated Ebook Library</strong><br/><span style="font-size:0.8rem;">Books individually worth ₦5,000–₦15,000 each</span></div><div style="flex:1;text-align:right">₦350,000+</div></div>
-      <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:16px 0;display:flex;justify-content:space-between;"><div style="flex:2"><strong>6-Month Foundation Program</strong><br/><span style="font-size:0.8rem;">Structured curriculum, milestones</span></div><div style="flex:1;text-align:right">₦80,000</div></div>
-      <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:16px 0;display:flex;justify-content:space-between;"><div style="flex:2"><strong>Weekly Monday Sessions (24/year)</strong><br/><span style="font-size:0.8rem;">Live accountability & insight</span></div><div style="flex:1;text-align:right">₦72,000</div></div>
-      <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:16px 0;display:flex;justify-content:space-between;"><div style="flex:2"><strong>Mid-Week Insight Labs (24/year)</strong></div><div style="flex:1;text-align:right">₦48,000</div></div>
-      <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:16px 0;display:flex;justify-content:space-between;"><div style="flex:2"><strong>Accountability System</strong></div><div style="flex:1;text-align:right">₦30,000</div></div>
-      <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:16px 0;display:flex;justify-content:space-between;"><div style="flex:2"><strong>Business Launch Sessions</strong></div><div style="flex:1;text-align:right">₦50,000</div></div>
-      <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:16px 0;display:flex;justify-content:space-between;"><div style="flex:2"><strong>Growth & Marketing Consultations</strong></div><div style="flex:1;text-align:right">₦60,000</div></div>
-      <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:16px 0;display:flex;justify-content:space-between;"><div style="flex:2"><strong>Thought Leadership Sessions</strong></div><div style="flex:1;text-align:right">₦45,000</div></div>
-      <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:16px 0;display:flex;justify-content:space-between;"><div style="flex:2"><strong>2-Year Growth Plan Access</strong></div><div style="flex:1;text-align:right">₦50,000</div></div>
-      <div style="border-bottom:1px solid rgba(255,255,255,0.08);padding:16px 0;display:flex;justify-content:space-between;"><div style="flex:2"><strong>Private Community of Serious Thinkers</strong></div><div style="flex:1;text-align:right">Priceless</div></div>
-      <div style="padding:24px 0;display:flex;justify-content:space-between;background:var(--card2);margin-top:20px;border-radius:var(--r-lg);"><div><div style="font-size:0.8rem;color:var(--accent);">Total Real Value</div><div style="font-family:var(--font-head);font-size:2rem;color:var(--white);">₦700,000+</div></div><div style="text-align:right;"><div style="font-size:0.8rem;color:var(--accent);">Your Investment</div><div style="font-family:var(--font-head);font-size:2.8rem;color:var(--white);">₦10,000</div><div style="font-size:0.75rem;">One-Time · Lifetime Access</div></div></div>
-    </div>
-
-    <div style="display:flex;flex-wrap:wrap;gap:30px;justify-content:center;margin-top:60px;">
-      <div style="background:var(--card);border:1px solid var(--accent-border);border-radius:var(--r-xl);padding:40px 30px;max-width:340px;text-align:center;flex:1;"><span style="background:var(--accent);color:#0A0C14;padding:5px 16px;border-radius:var(--r-full);font-size:0.7rem;display:inline-block;margin-bottom:24px;">🏆 Most Popular</span><div style="font-family:var(--font-head);font-size:1.8rem;color:var(--white);">Lifetime Access</div><div style="font-size:2.5rem;font-weight:700;margin:20px 0;">₦10,000</div><div style="font-size:0.85rem;">One-time payment · Forever access</div><a href="https://selar.com/h0qwgq8308" class="btn-primary" style="margin-top:28px;display:block;">Get Lifetime Access</a></div>
-      <div style="background:var(--card);border:1px solid var(--accent-border);border-radius:var(--r-xl);padding:40px 30px;max-width:340px;text-align:center;flex:1;"><div style="font-family:var(--font-head);font-size:1.8rem;color:var(--white);">Monthly Plan</div><div style="font-size:2rem;font-weight:700;margin:20px 0;">₦7,000<span style="font-size:1rem;">/month</span></div><div style="font-size:0.85rem;">Same full access. Spread over time.</div><a href="https://selar.com/h0qwgq8308" class="btn-secondary" style="margin-top:28px;display:block;">Start Monthly</a></div>
-    </div>
-
-    <div class="pricing-close reveal" style="text-align:center;margin-top:48px;"><p>You are not paying for books. You are paying for the system, the accountability, the business guidance, and access to rooms most people will never be invited into.</p><p><strong>₦10,000. Once. For everything above.</strong></p><p style="font-style:italic;color:var(--accent);">Is your growth worth ₦10,000?</p></div>
-  </div>
-</section>
-
-<!-- URGENCY -->
-<section id="urgency">
-  <div class="container">
-    <div class="urgency-inner" style="text-align:center;">
-      <div class="section-label">Limited Access</div>
-      <h2 class="section-headline reveal"><em>9 Spots.</em> One Start Date.<br/>No Second Chances at This Price.</h2>
-      <p class="reveal" style="margin-bottom:40px; max-width:700px; margin-left:auto; margin-right:auto;">This is the first time HPRS has ever been opened to anyone outside Waribugo Godspower's personal circle. When these 9 spots are gone, they are gone. There is no waitlist guarantee. No promise that the price stays the same.</p>
-      <div class="urgency-items" style="display:flex; flex-direction:column; gap:24px; align-items:center; max-width:600px; margin:0 auto;">
-        <div class="urgency-item reveal" style="display:flex; gap:16px; align-items:center; justify-content:center; flex-wrap:wrap;"><div class="urgency-item-icon">🔴</div><div class="urgency-item-text"><strong>Only <span id="spotsCount2">9</span> founding spots remaining</strong><br/>Cohort stays intentionally small. Every member gets real attention and real relationships.</div></div>
-        <div class="urgency-item reveal reveal-delay-1" style="display:flex; gap:16px; align-items:center; justify-content:center; flex-wrap:wrap;"><div class="urgency-item-icon">📅</div><div class="urgency-item-text"><strong>Cohort starts April 7, 2026</strong><br/>One start date. One window. Miss it and there is no confirmed next cohort.</div></div>
-        <div class="urgency-item reveal reveal-delay-2" style="display:flex; gap:16px; align-items:center; justify-content:center; flex-wrap:wrap;"><div class="urgency-item-icon">⏳</div><div class="urgency-item-text"><strong>Enrollment closes in:</strong><br/>
-          <div class="hero-timer" style="justify-content:center; margin-top:12px;">
-            <div class="timer-block"><span class="timer-num" id="timerDays2">00</span><span class="timer-label">Days</span></div>
-            <div class="timer-sep">:</div>
-            <div class="timer-block"><span class="timer-num" id="timerHours2">00</span><span class="timer-label">Hours</span></div>
-            <div class="timer-sep">:</div>
-            <div class="timer-block"><span class="timer-num" id="timerMins2">00</span><span class="timer-label">Mins</span></div>
-            <div class="timer-sep">:</div>
-            <div class="timer-block"><span class="timer-num" id="timerSecs2">00</span><span class="timer-label">Secs</span></div>
-          </div>
-        </div></div>
-        <div class="urgency-item reveal reveal-delay-3" style="display:flex; gap:16px; align-items:center; justify-content:center; flex-wrap:wrap;"><div class="urgency-item-icon">💡</div><div class="urgency-item-text"><strong>Founding member pricing — locked for this cohort only</strong><br/>This price will never exist again after April 7, 2026.</div></div>
-      </div>
-      <div class="reveal" style="margin-top:40px;">
-        <a href="https://selar.com/h0qwgq8308" class="btn-primary"><span>Claim One of the Last 9 Spots — Join HPRS Now</span></a>
-      </div>
-      <p class="urgency-close reveal" style="margin-top:40px;">Once this closes, it closes.</p>
-    </div>
-  </div>
-</section>
-
-<!-- WAITLIST -->
-<section id="waitlist">
-  <div class="container">
-    <div class="waitlist-inner" style="text-align:center;">
-      <div class="section-label">Can't Join Today?</div>
-      <h2 class="section-headline reveal">Get on the Waitlist.<br/><em>This Section Is Only for Serious People.</em></h2>
-      <p class="reveal" style="max-width:700px; margin-left:auto; margin-right:auto;">We understand that the right opportunity does not always arrive at the perfect time. Maybe you found this page today and something inside you said yes — but your finances are not ready yet.</p>
-      <p class="reveal" style="max-width:700px; margin-left:auto; margin-right:auto;">We are not closing the door on you. But we are only holding space for people who are genuinely serious about joining HPRS the moment they are able to.</p>
-      <div class="waitlist-card reveal" style="background:var(--card);border:1px solid var(--accent-border);border-radius:var(--r-xl);padding:40px;text-align:center;margin-top:32px; max-width:600px; margin-left:auto; margin-right:auto;">
-        <span class="waitlist-badge" style="display:inline-block;background:var(--accent-dim);padding:5px 16px;border-radius:var(--r-full);font-size:0.7rem;">Serious People Only | ₦10,000 When Ready | No Spot Guaranteed</span>
-        <p style="font-size:0.95rem;line-height:1.85;margin:24px 0;">Add your name to the waitlist. Use the time to put your ₦10,000 together. When you are ready — reach out. If a spot is still available, you get in.</p>
-        <p style="font-size:0.82rem;color:var(--text-dim);font-style:italic;">The waitlist is not a guarantee of a spot. It is a signal of intent. Spots are offered to waitlist members in order of sign-up.</p>
-        <a href="https://chat.whatsapp.com/H9cUK2kRoTAKQT5xJ1LoqF?mode=gi_t" class="btn-secondary" style="margin-top:24px;display:inline-block;">JOIN WAITLIST</a>
-        <p class="waitlist-bottom" style="margin-top:24px;font-size:0.8rem;">Joining the waitlist costs nothing. But your spot in HPRS will cost you ₦10,000. Start putting it together today.</p>
-      </div>
-    </div>
-  </div>
-</section>
-
-<!-- GUARANTEE -->
-<section id="guarantee">
-  <div class="container">
-    <div class="guarantee-inner" style="text-align:center;max-width:800px;margin:0 auto;">
-      <div class="guarantee-badge"><span>💯</span><small>Guaranteed</small></div>
-      <div class="section-label">Zero Risk</div>
-      <h2 class="section-headline reveal">Show Up. If Your Life Doesn't Change,<br/><em>You Pay Nothing.</em></h2>
-      <p class="reveal">Waribugo Godspower is making one promise:</p>
-      <p class="reveal">Show up. Engage. Do the work.</p>
-      <p class="reveal">If your life does not change — your thinking, your discipline, your business clarity, your results — you get every kobo back.</p>
-      <p class="guarantee-highlight reveal" style="font-size:1.2rem;font-style:italic;color:var(--accent);margin:24px 0;">"No forms. No arguments. No explanations required."</p>
-      <p class="reveal">This guarantee exists because of one simple truth: The people who show up are never the ones asking for refunds. The only way to lose here is to not show up. And that part is entirely up to you.</p>
-      <div class="guarantee-seal reveal" style="margin:32px 0;border:2px solid var(--accent);border-radius:var(--r-lg);padding:24px;background:var(--accent-dim);"><p style="font-weight:700;">100% MONEY-BACK GUARANTEE</p><span>If Your Life Doesn't Change — We Refund You in Full</span></div>
-      <div class="reveal"><a href="https://selar.com/h0qwgq8308" class="btn-primary"><span>I'll Show Up — Give Me My Spot</span></a></div>
-    </div>
-  </div>
-</section>
-
-<!-- FAQ -->
-<section id="faq">
-  <div class="container">
-    <div class="section-label">Questions</div>
-    <h2 class="section-headline reveal">Everything You <em>Want to Know</em></h2>
-    <div class="faq-wrap" style="max-width:800px; margin:0 auto;">
-      <div class="faq-item reveal" style="background:var(--card); border:1px solid var(--accent-border); border-radius:var(--r-lg); margin-bottom:12px;"><div class="faq-q" onclick="toggleFaq(this)" style="padding:20px 24px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-weight:600;">Is ₦10,000 really a one-time payment forever?<span class="faq-arrow" style="font-size:1.5rem;">+</span></div><div class="faq-a" style="padding:0 24px 20px 24px; display:none;"><p>Yes. Lifetime access. One payment. No renewals. No monthly fees. You pay once and you are in — forever.</p></div></div>
-      <div class="faq-item reveal" style="background:var(--card); border:1px solid var(--accent-border); border-radius:var(--r-lg); margin-bottom:12px;"><div class="faq-q" onclick="toggleFaq(this)" style="padding:20px 24px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-weight:600;">What is included in the private business sessions?<span class="faq-arrow" style="font-size:1.5rem;">+</span></div><div class="faq-a" style="padding:0 24px 20px 24px; display:none;"><p>Sessions for people starting businesses cover offer crafting, marketing, and launch strategy. Sessions for existing business owners cover growth, scaling, and marketing consultations. Thought leadership sessions cover personal branding and authority building. All sessions are live, exclusive to members, and not recorded.</p></div></div>
-      <div class="faq-item reveal" style="background:var(--card); border:1px solid var(--accent-border); border-radius:var(--r-lg); margin-bottom:12px;"><div class="faq-q" onclick="toggleFaq(this)" style="padding:20px 24px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-weight:600;">How do I access the 500+ ebook library?<span class="faq-arrow" style="font-size:1.5rem;">+</span></div><div class="faq-a" style="padding:0 24px 20px 24px; display:none;"><p>Immediately after your payment is confirmed, you receive private access to the full library — readable on any device, no internet required after download.</p></div></div>
-      <div class="faq-item reveal" style="background:var(--card); border:1px solid var(--accent-border); border-radius:var(--r-lg); margin-bottom:12px;"><div class="faq-q" onclick="toggleFaq(this)" style="padding:20px 24px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-weight:600;">How much time do I need each week?<span class="faq-arrow" style="font-size:1.5rem;">+</span></div><div class="faq-a" style="padding:0 24px 20px 24px; display:none;"><p>Plan for 50–70 pages of reading (3–5 hours), one 60-minute Monday Session, and one mid-week session. Serious but sustainable.</p></div></div>
-      <div class="faq-item reveal" style="background:var(--card); border:1px solid var(--accent-border); border-radius:var(--r-lg); margin-bottom:12px;"><div class="faq-q" onclick="toggleFaq(this)" style="padding:20px 24px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-weight:600;">What if I fall behind on reading?<span class="faq-arrow" style="font-size:1.5rem;">+</span></div><div class="faq-a" style="padding:0 24px 20px 24px; display:none;"><p>The accountability system is built to catch you before you fall too far. Your weekly report surfaces the gap. The community pulls you back.</p></div></div>
-      <div class="faq-item reveal" style="background:var(--card); border:1px solid var(--accent-border); border-radius:var(--r-lg); margin-bottom:12px;"><div class="faq-q" onclick="toggleFaq(this)" style="padding:20px 24px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-weight:600;">Why only 9 spots?<span class="faq-arrow" style="font-size:1.5rem;">+</span></div><div class="faq-a" style="padding:0 24px 20px 24px; display:none;"><p>HPRS works because of the quality and intimacy of the community. Small cohorts mean every member gets real attention, real accountability, and real relationships. When 9 spots are gone, enrollment closes.</p></div></div>
-      <div class="faq-item reveal" style="background:var(--card); border:1px solid var(--accent-border); border-radius:var(--r-lg); margin-bottom:12px;"><div class="faq-q" onclick="toggleFaq(this)" style="padding:20px 24px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-weight:600;">Is there really a money-back guarantee?<span class="faq-arrow" style="font-size:1.5rem;">+</span></div><div class="faq-a" style="padding:0 24px 20px 24px; display:none;"><p>Yes. Show up. If your life does not change, you get a full refund. No conditions. No fine print. We stand behind this completely.</p></div></div>
-      <div class="faq-item reveal" style="background:var(--card); border:1px solid var(--accent-border); border-radius:var(--r-lg); margin-bottom:12px;"><div class="faq-q" onclick="toggleFaq(this)" style="padding:20px 24px; cursor:pointer; display:flex; justify-content:space-between; align-items:center; font-weight:600;">When does the first cohort start?<span class="faq-arrow" style="font-size:1.5rem;">+</span></div><div class="faq-a" style="padding:0 24px 20px 24px; display:none;"><p>April 7, 2026. Enrollment closes when the last spot is filled or on that date — whichever comes first. There is no confirmed next cohort date.</p></div></div>
-    </div>
-    <div style="text-align:center;margin-top:48px;" class="reveal">
-      <a href="https://selar.com/h0qwgq8308" class="btn-primary"><span>I Have No More Questions — Claim My Spot</span></a>
-    </div>
-  </div>
-</section>
-
-<!-- FINAL CTA -->
-<section id="finalcta">
-  <div class="final-inner" style="text-align:center;max-width:800px;margin:0 auto;padding:60px 20px;">
-    <div class="section-label" style="text-align:center;">One Decision</div>
-    <h2 class="final-headline reveal" style="font-family:var(--font-head);font-size:clamp(1.8rem,4vw,3rem);color:var(--white);text-align:center;">One Decision. Two Years.<br/><em>A Completely Different Version of You.</em></h2>
-    <p class="final-sub reveal" style="margin:24px 0; text-align:center;">500+ ebooks. Weekly live sessions. Private business consultations and marketing sessions. Full accountability system. A community of the most serious thinkers you will ever be in a room with.</p>
-    <div class="final-question reveal" style="font-size:1.2rem;font-style:italic;margin:32px 0; text-align:center;">"What would it cost me to stay exactly where I am for the next 2 years?"</div>
-    <div class="spots-badge" style="margin:0 auto 28px; display:inline-flex;">
-      <div class="spot-dot"></div>
-      Only <strong id="spotsCount3">&nbsp;9&nbsp;</strong> spots remaining
-    </div>
-    <div class="hero-timer" style="justify-content:center;margin-bottom:36px;">
-      <div class="timer-block"><span class="timer-num" id="timerDays3">00</span><span class="timer-label">Days</span></div>
-      <div class="timer-sep">:</div>
-      <div class="timer-block"><span class="timer-num" id="timerHours3">00</span><span class="timer-label">Hours</span></div>
-      <div class="timer-sep">:</div>
-      <div class="timer-block"><span class="timer-num" id="timerMins3">00</span><span class="timer-label">Mins</span></div>
-      <div class="timer-sep">:</div>
-      <div class="timer-block"><span class="timer-num" id="timerSecs3">00</span><span class="timer-label">Secs</span></div>
-    </div>
-    <div class="reveal"><a href="https://selar.com/h0qwgq8308" class="btn-primary"><span>Join The High Performers Reading System — ₦10,000 Lifetime</span></a></div>
-    <p class="final-options reveal" style="margin-top:24px;font-size:0.9rem; text-align:center;">Prefer monthly? ₦7,000/month — same full access</p>
-    <p class="final-guarantee reveal" style="margin-top:16px;font-size:0.85rem; text-align:center;">100% money-back guarantee if your life doesn't change. No fine print. No arguments. Just show up.</p>
-  </div>
-</section>
-
-<footer style="background:var(--card);padding:48px 20px 32px;border-top:1px solid var(--accent-border);text-align:center;">
-  <div class="footer-inner">
-    <div class="footer-logo" style="font-family:var(--font-head);font-size:1.8rem;color:var(--accent);">HPRS</div>
-    <div class="footer-links" style="margin:20px 0;display:flex;gap:24px;justify-content:center;"><a href="#" style="color:var(--text);text-decoration:none;">Privacy Policy</a><a href="#" style="color:var(--text);text-decoration:none;">Terms</a><a href="#" style="color:var(--text);text-decoration:none;">Contact</a></div>
-    <div class="footer-copy" style="color:var(--text-dim);font-size:0.75rem;">© 2026 The High Performers Reading System. All rights reserved.</div>
-  </div>
-  <p class="footer-tagline" style="margin-top:16px;font-size:0.7rem;color:var(--accent);">Built for the ones who refuse to stay average.</p>
-</footer>
-
-<div class="mobile-sticky" style="position:fixed;bottom:0;left:0;right:0;background:var(--accent);padding:12px;text-align:center;z-index:1000;display:block;width:100%;"><a href="https://selar.com/h0qwgq8308" style="color:#0A0C14;text-decoration:none;font-weight:700;">🔵 Only 9 Spots Left — Join HPRS for ₦10,000 →</a></div>
-<script>
-/* ── CANVAS ─────────────────────────────────────────────────── */
-const canvas = document.getElementById('heroCanvas');
-const ctx    = canvas.getContext('2d');
-
-function resizeCanvas() {
-  canvas.width  = canvas.offsetWidth;
-  canvas.height = canvas.offsetHeight;
-}
-resizeCanvas();
-window.addEventListener('resize', resizeCanvas);
-
-class Particle {
-  constructor() { this.reset(); }
-  reset() {
-    this.x  = Math.random() * canvas.width;
-    this.y  = Math.random() * canvas.height;
-    this.r  = Math.random() * 1.8 + 0.4;
-    this.vx = (Math.random() - 0.5) * 0.35;
-    this.vy = (Math.random() - 0.5) * 0.35;
-    this.o  = Math.random() * 0.5 + 0.1;
-  }
-  update() {
-    this.x += this.vx; this.y += this.vy;
-    if (this.x < 0 || this.x > canvas.width || this.y < 0 || this.y > canvas.height) this.reset();
-  }
-  draw() {
-    ctx.beginPath();
-    ctx.arc(this.x, this.y, this.r, 0, Math.PI * 2);
-    ctx.fillStyle = `rgba(212,175,55,${this.o})`;
-    ctx.fill();
-  }
-}
-
-const particles = Array.from({length: 90}, () => new Particle());
-
-function animate() {
-  ctx.clearRect(0, 0, canvas.width, canvas.height);
-  particles.forEach(p => { p.update(); p.draw(); });
-  for (let i = 0; i < particles.length; i++) {
-    for (let j = i + 1; j < particles.length; j++) {
-      const dx = particles[i].x - particles[j].x;
-      const dy = particles[i].y - particles[j].y;
-      const d  = Math.sqrt(dx*dx + dy*dy);
-      if (d < 110) {
-        ctx.beginPath();
-        ctx.moveTo(particles[i].x, particles[i].y);
-        ctx.lineTo(particles[j].x, particles[j].y);
-        ctx.strokeStyle = `rgba(212,175,55,${0.07*(1-d/110)})`;
-        ctx.lineWidth = 0.6;
-        ctx.stroke();
-      }
-    }
-  }
-  requestAnimationFrame(animate);
-}
-animate();
-
-/* ── COUNTDOWN ──────────────────────────────────────────────── */
-const END_DATE = new Date('2026-04-07T00:00:00').getTime();
-
-function updateTimers() {
-  const diff = Math.max(0, END_DATE - Date.now());
-  const d = Math.floor(diff / 86400000);
-  const h = Math.floor((diff % 86400000) / 3600000);
-  const m = Math.floor((diff % 3600000) / 60000);
-  const s = Math.floor((diff % 60000) / 1000);
-  const f = n => String(n).padStart(2,'0');
-  const sets = [
-    ['timerDays','timerHours','timerMins','timerSecs'],
-    ['timerDays2','timerHours2','timerMins2','timerSecs2'],
-    ['timerDays3','timerHours3','timerMins3','timerSecs3'],
-  ];
-  sets.forEach(([di,hi,mi,si]) => {
-    const vals = {[di]:f(d),[hi]:f(h),[mi]:f(m),[si]:f(s)};
-    Object.entries(vals).forEach(([id,val]) => {
-      const el = document.getElementById(id);
-      if (el) el.textContent = val;
-    });
-  });
-}
-setInterval(updateTimers, 1000);
-updateTimers();
-
-/* ── SPOTS ──────────────────────────────────────────────────── */
-let spots = parseInt(localStorage.getItem('hprs_spots2') || '9');
-function updateSpots() {
-  ['spotsCount','spotsCount2','spotsCount3'].forEach(id => {
-    const el = document.getElementById(id);
-    if (el) el.textContent = spots;
-  });
-}
-updateSpots();
-setInterval(() => {
-  if (spots > 1 && Math.random() < 0.12) {
-    spots--;
-    localStorage.setItem('hprs_spots2', spots);
-    updateSpots();
-  }
-}, 95000);
-
-/* ── NAV ────────────────────────────────────────────────────── */
-window.addEventListener('scroll', () => {
-  document.getElementById('mainNav').classList.toggle('scrolled', window.scrollY > 60);
-});
-
-/* ── REVEAL ─────────────────────────────────────────────────── */
-const ro = new IntersectionObserver(entries => {
-  entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
-}, { threshold: 0.1 });
-document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
-
-/* ── FAQ ────────────────────────────────────────────────────── */
-function toggleFaq(el) {
-  const item = el.parentElement;
-  const answer = item.querySelector('.faq-a');
-  const arrow = el.querySelector('.faq-arrow');
-  const open = answer.style.display === 'block';
-  document.querySelectorAll('.faq-a').forEach(a => a.style.display = 'none');
-  document.querySelectorAll('.faq-arrow').forEach(a => a.textContent = '+');
-  if (!open) {
-    answer.style.display = 'block';
-    arrow.textContent = '−';
-  }
-}
-</script>
-</body>
-</html>
+      <div class="pill
